@@ -1,3 +1,5 @@
+In this project, I also used the BootStrap toolkit. So if you are looking to download and try my code out for yourself, you may need to install it. To do so, I used node.js and its npm functionality to install the toolkit. From VS Code, I opened up the project folder, then the console (press ctrl+ ` from vs code), and typed 'npm i BootStrap'. If you have node.js already functioning you should be good to go after a few seconds.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
