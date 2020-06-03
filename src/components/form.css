@@ -1,0 +1,12 @@
+.small {
+  font-size: 12px;
+  padding: 4px 6px;
+  border: 2px black;
+  margin: 3px;
+  background-color: lightgray;
+}
+
+::placeholder {
+  color: black;
+  font-weight: lighter;
+}
