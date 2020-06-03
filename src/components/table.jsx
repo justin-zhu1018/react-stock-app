@@ -25,8 +25,8 @@ class Table extends Component {
       </tr>
     );
 
-    const testProps = this.props.dataArray;
-    const test = (stock) => {
+    const stockData = this.props.dataArray;
+    const renderRowData = (stock) => {
       return (
         <tr>
           <td>{stock[0].o}</td>
@@ -42,7 +42,7 @@ class Table extends Component {
       <div className="dark-mode">
         <table className="table table-dark">
           <thead>{headingMarkup}</thead>
-          <tbody>{testProps.map(test)}</tbody>
+          <tbody>{stockData.map(renderRowData)}</tbody>
         </table>
       </div>
     );
