@@ -20,10 +20,11 @@ class App extends Component {
       submittedSeconds: "",
       currentDateAndTime: "",
     };
+    var handle;
   }
 
   handleSubmit = (event) => {
-    console.log("handle submit");
+    // console.log("handle submit");
     event.preventDefault();
     this.setState({
       submittedSymbol: this.state.symbol,
@@ -43,14 +44,12 @@ class App extends Component {
   };
 
   instructions = (interval) => {
-    var handle = setInterval(this.grabData, interval);
-    if (this.state.dataArray.length === 0) {
-      this.grabData();
-    } else {
-      clearInterval(handle);
+    clearInterval(this.handle);
+    this.handle = setInterval(this.grabData, interval);
+    if (this.state.dataArray.length !== 0) {
       this.setState({ dataArray: [] });
-      this.grabData();
     }
+    this.grabData();
   };
 
   grabData = () => {
